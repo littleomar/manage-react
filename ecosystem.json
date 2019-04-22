@@ -1,0 +1,21 @@
+{
+  "apps": [
+  {
+    "name": "stone",
+    "script": "./server/index.js",
+    "env_production": {
+      "NODE_ENV": "production"
+    }
+  }
+],
+  "deploy": {
+  "production": {
+    "user": "root",
+      "host": "47.95.215.162",
+      "repo": "git@github.com:littleomar/stone-react.git",
+      "ref": "origin/master",
+      "path": "/home/stone/",
+      "post-deploy": "yarn install && yarn run deploy && pm2 startOrRestart ecosystem.json --env production"
+    }
+  }
+}
