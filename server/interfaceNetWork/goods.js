@@ -413,9 +413,8 @@ module.exports = (router) => {
     })
 
     let deleRes = await fetchApiData({
-      url: `https://d.apicloud.com/mcm/api/usersells?filter=${JSON.stringify({limit:999,manifest:id})}`
+      url: `https://d.apicloud.com/mcm/api/goodsells?filter=${JSON.stringify({limit:999,where:{manifest:id}})}`
     })
-
     deleRes.map(async res=>{
       await fetchApiData({
         url: `https://d.apicloud.com/mcm/api/goodsells/${res.id}`,
