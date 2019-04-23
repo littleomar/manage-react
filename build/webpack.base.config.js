@@ -18,7 +18,7 @@ const config = {
     }),
     new webpack.IgnorePlugin(/\.\/locale/,/moment/),
     new webpack.DefinePlugin({
-      'process.env.API_BASE': isDev ? '"http://127.0.0.1:3000"':'"http://ccimm.top:3000"'    //这里网址修改为本站域名
+      'process.env.API_BASE': isDev ? '"http://127.0.0.1:3000"':'"http://stone.ccimm.top"'    //这里网址修改为本站域名
       // 'process.env.API_BASE': '"http://127.0.0.1:3000"'
     })
   ],
