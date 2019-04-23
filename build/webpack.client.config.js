@@ -64,7 +64,7 @@ if (isDev) {
       new OptimizeCSSAssetsPlugin({})
     ]
   }
-  config.output.publicPath = "http://127.0.0.1:3000/"
+  config.output.publicPath = cdnConfig.host
 }
 
 module.exports = smart(baseConfig,config)
